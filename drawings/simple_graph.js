@@ -144,6 +144,16 @@ Drawing.SimpleGraph = function(options) {
     }
   }
 
+  function addTCNode(id, name) {
+	var node = new Node(id);
+	graph.addNode(node);
+	drawNode(node);
+	node.data.title = name;
+  }
+  function addTCEdge(id1, id2) {
+	graph.addEdge(graph.getNode(id1), graph.getNode(id2));
+	drawEdge(graph.getNode(id1), graph.getNode(id2));
+  }
 
   /**
    *  Creates a graph with random nodes and edges.
@@ -151,8 +161,108 @@ Drawing.SimpleGraph = function(options) {
    *  numNodes and numEdges.
    */
   function createGraph() {
+	  
+	addTCNode(0, "Aer");
+	addTCNode(1, "Alienis");
+	addTCNode(2, "Aqua");
+	addTCNode(3, "Arbor");
+	addTCNode(4, "Auram");
+	addTCNode(5, "Bestia");
+	addTCNode(6, "Cognito");
+	addTCNode(7, "Corpus");
+	addTCNode(8, "Exanimis");
+	addTCNode(9, "Fabrico");
+	addTCNode(10, "Fames");
+	addTCNode(11, "Gelum");
+	addTCNode(12, "Herba");
+	addTCNode(13, "Humanus");
+	addTCNode(14, "Ignis");
+	addTCNode(15, "Instrumentum ");
+	addTCNode(16, "Iter");
+	addTCNode(17, "Limus");
+	addTCNode(18, "Lucrum");
+	addTCNode(19, "Lux");
+	addTCNode(20, "Machina");
+	addTCNode(21, "Messis");
+	addTCNode(22, "Metallum");
+	addTCNode(23, "Meto");
+	addTCNode(24, "Mortuus");
+	addTCNode(25, "Motus");
+	addTCNode(26, "Ordo");
+	addTCNode(27, "Pannus");
+	addTCNode(28, "Perditio");
+	addTCNode(29, "Perfodio");
+	addTCNode(30, "Permutatio");
+	addTCNode(31, "Potentia");
+	addTCNode(32, "Praecantatio");
+	addTCNode(33, "Sano");
+	addTCNode(34, "Sensus");
+	addTCNode(35, "Spiritus");
+	addTCNode(36, "Telum");
+	addTCNode(37, "Tempestas");
+	addTCNode(38, "Tenebrae");
+	addTCNode(39, "Terra");
+	addTCNode(40, "Tutamen");
+	addTCNode(41, "Vacuos");
+	addTCNode(42, "Venenum");
+	addTCNode(43, "Victus");
+	addTCNode(44, "Vinculum");
+	addTCNode(45, "Vitium");
+	addTCNode(46, "Vitreus");
+	addTCNode(47, "Volatus");
+	
+	addTCEdge(38, 1);	addTCEdge(41, 1);
+	
+	addTCEdge(0, 3);	addTCEdge(12, 3);
+	addTCEdge(0, 4);	addTCEdge(32, 4);
+	addTCEdge(25, 5);	addTCEdge(43, 5);
+	addTCEdge(14, 6);	addTCEdge(35, 6);
+	addTCEdge(5, 7);	addTCEdge(24, 7);
+	addTCEdge(25, 8);	addTCEdge(24, 8);
+	addTCEdge(13, 9);	addTCEdge(15, 9);
+	addTCEdge(41, 10);	addTCEdge(43, 10);
+	addTCEdge(14, 11);	addTCEdge(28, 11);
+	addTCEdge(39, 12);	addTCEdge(43, 12);
+	addTCEdge(5, 13);	
+		
+	addTCEdge(13, 15);	addTCEdge(26, 15);
+	addTCEdge(25, 16);	addTCEdge(39, 16);
+	addTCEdge(2, 17);	addTCEdge(43, 17);
+	addTCEdge(10, 18);	addTCEdge(13, 18);
+	addTCEdge(0, 19);	addTCEdge(14, 19);
+	addTCEdge(15, 20);	addTCEdge(25, 20);
+	addTCEdge(12, 21);	addTCEdge(13, 21);
+	addTCEdge(39, 22);	addTCEdge(46, 22);
+	addTCEdge(15, 23);	addTCEdge(21, 23);
+	addTCEdge(28, 24);	addTCEdge(43, 24);
+	addTCEdge(0, 25);	addTCEdge(26, 25);
+		
+	addTCEdge(5, 27);	addTCEdge(15, 27);
+		
+	addTCEdge(13, 29);	addTCEdge(39, 29);
+	addTCEdge(26, 30);	addTCEdge(28, 30);
+	addTCEdge(14, 31);	addTCEdge(26, 31);
+	addTCEdge(31, 32);	addTCEdge(41, 32);
+	addTCEdge(26, 33);	addTCEdge(43, 33);
+	addTCEdge(0, 34);	addTCEdge(35, 34);
+	addTCEdge(24, 35);	addTCEdge(43, 35);
+	addTCEdge(14, 36);	addTCEdge(15, 36);
+	addTCEdge(0, 37);	addTCEdge(2, 37);
+	addTCEdge(19, 38);	addTCEdge(41, 38);
+		
+	addTCEdge(15, 40);	addTCEdge(39, 40);
+	addTCEdge(0, 41);	addTCEdge(28, 41);
+	addTCEdge(2, 42);	addTCEdge(28, 42);
+	addTCEdge(2, 43);	addTCEdge(39, 43);
+	addTCEdge(25, 44);	addTCEdge(28, 44);
+	addTCEdge(28, 45);	addTCEdge(32, 45);
+	addTCEdge(26, 46);	addTCEdge(39, 46);
+	addTCEdge(0, 47);	addTCEdge(25, 47);
 
-    var node = new Node(0);
+
+
+
+    /* var node = new Node(0);
     node.data.title = "This is node " + node.id;
     graph.addNode(node);
     drawNode(node);
@@ -178,12 +288,14 @@ Drawing.SimpleGraph = function(options) {
         }
       }
       steps++;
-    }
+    } */
 
     that.layout_options.width = that.layout_options.width || 2000;
     that.layout_options.height = that.layout_options.height || 2000;
     that.layout_options.iterations = that.layout_options.iterations || 100000;
     that.layout_options.layout = that.layout_options.layout || that.layout;
+    that.layout_options.attraction = that.layout_options.attraction || 1.0;
+    that.layout_options.repulsion = that.layout_options.repulsion || 2.0;
     graph.layout = new Layout.ForceDirected(graph, that.layout_options);
     graph.layout.init();
     info_text.nodes = "Nodes " + graph.nodes.length;

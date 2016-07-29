@@ -47,6 +47,10 @@
   reached_limit() - returns true if the limit has been reached, otherwise false
 
  */
+  node = new Node(1);
+  node.position.x = 100;
+  node.position.y = 100;
+  node.data.title = "Title of the node";
 
 function Graph(options) {
   this.options = options || {};
